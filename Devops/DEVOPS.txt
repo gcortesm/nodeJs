@@ -1,3 +1,17 @@
-Devops, para mi es el proceso en el que se evalua todo el ciclo de vida para el desarrollo de un proyecto, con esto quiero decir 
+1.Que es DevOps? Devops, para mi es el proceso en el que se evalua todo el ciclo de vida para el desarrollo de un proyecto, con esto quiero decir 
 que con devops se parte desde el proceso de la planeacion del desarrollo , el desarrollo  la planeacion de pruebas y el despliegue en los diferentes 
 entornos que se han definido y despues de esto vendria el monitoreo de la aplicacion que nos genera una retroalimentacion que nos ayuda al crecimiento de la aplicacion.
+
+
+2.Ideas para generar más empatía, confianza y seguridad psicológica en el equipo?
+
+Empatia:
+- Que los integrantes ofrezcan apoyo tecnico a cualquiera que presente dificultades.
+- Intercambio de tareas para aprovechar la fortaleza de los integrantes en temas individuales.                                                    
+
+Confianza: 
+- Actividades didacticas entre el equipo. (Juegos , Compartir que serian como desayunos almuerzos)
+- Tener presente fechas importantes del equipo, cumpleaños entre otros.
+
+Seguridad Psicologica:
+- Comentar los puntos fuertes de los compaNeros cuando se trabaja en equipo.
