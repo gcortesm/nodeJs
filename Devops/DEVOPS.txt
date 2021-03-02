@@ -15,3 +15,17 @@ Confianza:
 
 Seguridad Psicologica:
 - Comentar los puntos fuertes de los compaNeros cuando se trabaja en equipo.
+
+
+3.
+a. Trello, Azure Devops
+b. 
+
+Cada área debería definir un rol encargado de gestionar la comunicación con otras equipos, de este manera el puede diseccionar cualquier solicitud de manera mas asertiva, pues conoce los integrantes del área a la que pertenece.
+
+Generar un organigrama con los lideres he integrantes de cada área  de la empresa , donde se tenga información de contacto  con la idea de reducir los tiempos que se pueden invertir en tratar de comunicarse con otras áreas.
+ 
+Generar un DashBoard con información de proyectos que se estén actualmente desarrollando y que cada área puede definir su avance del proyecto, debería enviarse un informe periódico a los involucrados de cada proyecto donde se notifique el avance del mismo. 
+
+
+c. Reuniones entre líderes de cada área y lideres técnico de las mismas. Seria algo como un consejo para la evaluación de proyectos donde se definan prioridades y las responsabilidades de cada área entre los proyectos. 
