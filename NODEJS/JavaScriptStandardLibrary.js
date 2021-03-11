@@ -238,128 +238,143 @@ function sieve(n){
     return n;
 }
 
-//console.log(sieve(22));
 
-/**
- * Expresiones regulares: una expresion regular es un objeto que describe un patron textual. 
- * 
- * 
- */
+function expresiones (){
+    //console.log(sieve(22));
 
- let patern = /s$/i;
- let patern2 = new RegExp("s$");//metacaracter 
- let javaPater = /java/;
- console.log(' jg java javaita'.match(javaPater));
+    /**
+     * Expresiones regulares: una expresion regular es un objeto que describe un patron textual. 
+     * 
+     * 
+     */
 
- /**
-  * caracteres de puntuacion en una expresion
-  * ^ $ 
-  * . => Cualquier carácter excepto nueva línea u otro terminador de línea Unicode. O, si la expresión regular usa la marca s, 
-  *      entonces un punto coincide con cualquier carácter, incluidos los terminadores de línea.
-  * 
-  *   * + ? = ! : | / \ ( ) [ ] { }
-  * 
-  * \w Cualquier carácter de palabra ASCII. Equivalente a [a-zA-Z0-9_].
-    \W Cualquier carácter que no sea un carácter de palabra ASCII. Equivalente a [^a-zA-Z0-9_].
+    let patern = /s$/i;
+    let patern2 = new RegExp("s$");//metacaracter 
+    let javaPater = /java/;
+    console.log(' jg java javaita'.match(javaPater));
+
+    /**
+     * caracteres de puntuacion en una expresion
+     * ^ $ 
+     * . => Cualquier carácter excepto nueva línea u otro terminador de línea Unicode. O, si la expresión regular usa la marca s, 
+     *      entonces un punto coincide con cualquier carácter, incluidos los terminadores de línea.
+     * 
+     *   * + ? = ! : | / \ ( ) [ ] { }
+     * 
+     * \w Cualquier carácter de palabra ASCII. Equivalente a [a-zA-Z0-9_].
+     \W Cualquier carácter que no sea un carácter de palabra ASCII. Equivalente a [^a-zA-Z0-9_].
     \s Cualquier carácter de espacio en blanco Unicode.
     \S Cualquier carácter que no sea un espacio en blanco Unicode.
     \d Cualquier dígito ASCII. Equivalente a [0-9].
     \D Cualquier carácter que no sea un dígito ASCII. Equivalente a [^0-9].
     [\b] Un retroceso literal (caso especial). 
-  */
+    */
 
-  //para hacer coincidir alguno de estos tendriamos que usar back slach \
+    //para hacer coincidir alguno de estos tendriamos que usar back slach \
 
-  let pattern =/[abc]/; //Coincide con cualquiera de las letras a, b y c
-  let patternnegado = /[^abc]/; //negamos que no coincida
+    let pattern =/[abc]/; //Coincide con cualquiera de las letras a, b y c
+    let patternnegado = /[^abc]/; //negamos que no coincida
 
-  pattern =/[a-z]/; //Este es para solo letras de la a-z
-  pattern =/[a-zA-Z]/; // Del a -z en mayusculas y minusculas
-  pattern =/[a-zA-Z0-9]/; // Del a -z en mayusculas y minusculas y los numeros del 0-9
-  pattern =/[...]/; //Cualquier caracter entre corchetes.ke
-  pattern =/[^...]/; // Coincide con cualquer caracter que no este entre corchetes.
-  
-  /* repetciones.
-   * cuantas veces se pueda repetir un elemento
-   * {n.m}  => conicide con el digito anterior almenos n veces pero no mas de m veces
-     {n,}   => coincide almenos n o mas veces
-     {n}    => Existe exactamente con n veces 
-     ?      => Conicide con cero o una aparicion del elemento anterior Seria como un elemento opcional
+    pattern =/[a-z]/; //Este es para solo letras de la a-z
+    pattern =/[a-zA-Z]/; // Del a -z en mayusculas y minusculas
+    pattern =/[a-zA-Z0-9]/; // Del a -z en mayusculas y minusculas y los numeros del 0-9
+    pattern =/[...]/; //Cualquier caracter entre corchetes.ke
+    pattern =/[^...]/; // Coincide con cualquer caracter que no este entre corchetes.
+    
+    /* repetciones.
+    * cuantas veces se pueda repetir un elemento
+    * {n.m}  => conicide con el digito anterior almenos n veces pero no mas de m veces
+        {n,}   => coincide almenos n o mas veces
+        {n}    => Existe exactamente con n veces 
+        ?      => Conicide con cero o una aparicion del elemento anterior Seria como un elemento opcional
             equivale {0,1}
-     +      => una o mas ocurrencias del elemento anterior equivale {1,}
-     *      => con cero o mas ocurrencias del elemento anterior {0,}    
-   */
-  pattern = /\d/;//coincide con un digito entre 0-9
-  pattern = /\d{2,6}/;//coincide con un digito entre 0-9
+        +      => una o mas ocurrencias del elemento anterior equivale {1,}
+        *      => con cero o mas ocurrencias del elemento anterior {0,}    
+    */
+    pattern = /\d/;//coincide con un digito entre 0-9
+    pattern = /\d{2,6}/;//coincide con un digito entre 0-9
 
-  pattern = /\w{3}\d?/;//Coincide con 3 digitos de palbra y un digito opcional
-  pattern = /\s+java\s+/; // coincide con java mas uno o mas espacio antes y despues
-  pattern = /[^(*]/; //Coincide con 0 o mas caracteres que no sean parentesis abiertos
+    pattern = /\w{3}\d?/;//Coincide con 3 digitos de palbra y un digito opcional
+    pattern = /\s+java\s+/; // coincide con java mas uno o mas espacio antes y despues
+    pattern = /[^(*]/; //Coincide con 0 o mas caracteres que no sean parentesis abiertos
 
-/**
- * cada expresion regular puede tener uno o mas para afectar las coincidencias.
- * g    => significa que es global, todas las coincidencias dentro de una cadena en lugar de la primera
- * i    => Especifica que la coincidencia no debe distinguir entre mayusculas y minusculas
- * m    => Especifica que la coincidencia debe realizarse en modo multilinea.
- * s    => es util cuando se trabaja con texto que incluye nuevas lineas
- * u    => Significa unicode, con los puntos unicode completos, en lugar de coincidir
- *         con los valores de 16 bits, si no se hace no funcionara con texto que tengan emojis y otros caracteres chinos.
- * y    => Esta bandera indica que la expresion debe coincidir al principio de una cadena
- *         o en el primer caracter que sigue a la coincidencia anteipor
- */
-
-
- //Metodos de string para coincidencia de patrones
-
- /**
-  *  search() : toma un argumento de expreion regular y devuelve la primera sub cadena oincidente o -1 si no encuentra nada
-  */
-
-  console.log("javascript melo ".search(/script/));
+    /**
+    * cada expresion regular puede tener uno o mas para afectar las coincidencias.
+    * g    => significa que es global, todas las coincidencias dentro de una cadena en lugar de la primera
+    * i    => Especifica que la coincidencia no debe distinguir entre mayusculas y minusculas
+    * m    => Especifica que la coincidencia debe realizarse en modo multilinea.
+    * s    => es util cuando se trabaja con texto que incluye nuevas lineas
+    * u    => Significa unicode, con los puntos unicode completos, en lugar de coincidir
+    *         con los valores de 16 bits, si no se hace no funcionara con texto que tengan emojis y otros caracteres chinos.
+    * y    => Esta bandera indica que la expresion debe coincidir al principio de una cadena
+    *         o en el primer caracter que sigue a la coincidencia anteipor
+    */
 
 
-let funcionLet = (n)=>{
+    //Metodos de string para coincidencia de patrones
+
+    /**
+     *  search() : toma un argumento de expreion regular y devuelve la primera sub cadena oincidente o -1 si no encuentra nada
+     */
+
+    console.log("javascript melo ".search(/script/));
+
+
+    let funcionLet = (n)=>{
     if( n===2)
         return ' dos ';
     return ' doscientos veinticnco ';
-};
- 
-  //replace, reemplaza
-  let times ='2 times is 225';
-  console.log(times.replace(/\d+/gu, n=> funcionLet(parseInt(n))));// Transformamos los digitos en exadecimal
-  console.log(times.replace(/\d+/gu, n=> parseInt(n).toString(8)));// Transformamos los digitos en exadecimal
-  console.log(times.replace(/\d+/gu, n=> parseInt(n).toString(16)));// Transformamos los digitos en exadecimal
+    };
 
-  //Match como el de tinder ajajjajajaj
-  /**
-   * Toma una expresion regular como unico argumento y devuelve una matriz como resultado de la coincidencia
-   * 
-   */
+    //replace, reemplaza
+    let times ='2 times is 225';
+    console.log(times.replace(/\d+/gu, n=> funcionLet(parseInt(n))));// Transformamos los digitos en exadecimal
+    console.log(times.replace(/\d+/gu, n=> parseInt(n).toString(8)));// Transformamos los digitos en exadecimal
+    console.log(times.replace(/\d+/gu, n=> parseInt(n).toString(16)));// Transformamos los digitos en exadecimal
 
-
+    //Match como el de tinder ajajjajajaj
+    /**
+     * Toma una expresion regular como unico argumento y devuelve una matriz como resultado de la coincidencia
+     * 
+     */
 
 
-let matchtest ='7plus igual a 8 plus menos 1';
-console.log(matchtest.match(/\d+/g));
 
-//Ejemplo Match
-let urlPatter=/(\w+):\/\/([\w.]+)\/(\S*)/;
-let texturl ='Log visitame htpps://miblogmelo.com/miperfil/proyectos';
 
-let matchurl = texturl.match(urlPatter);
-console.log(matchurl);
-let fullUrl,host,protocolo,path;
-if(matchurl!=null){
+    let matchtest ='7plus igual a 8 plus menos 1';
+    console.log(matchtest.match(/\d+/g));
+
+    //Ejemplo Match
+    let urlPatter=/(\w+):\/\/([\w.]+)\/(\S*)/;
+    let texturl ='Log visitame htpps://miblogmelo.com/miperfil/proyectos';
+
+    let matchurl = texturl.match(urlPatter);
+    console.log(matchurl);
+    let fullUrl,host,protocolo,path;
+    if(matchurl!=null){
     fullUrl = matchurl[0];
     protocolo = matchurl[1];
     host =matchurl[2];
     path = matchurl[3];
-}
-console.log(`full url ${fullUrl} protocolo ${protocolo} host ${host}  path ${path}`);
+    }
+    console.log(`full url ${fullUrl} protocolo ${protocolo} host ${host}  path ${path}`);
 
-console.log(matchurl.index);
-console.log(matchurl.input);
-console.log(matchurl.groups);
+    console.log(matchurl.index);
+    console.log(matchurl.input);
+    console.log(matchurl.groups);
+
+    /**
+     * split , divide un texto en una matriz separandolo con un separador.
+     * 
+     */
+
+    console.log("1,2,3,4,5,6".split(","));
+    console.log("1,2,3,4,\n5,6".split(/\s*,\s*/));
+
+}
+
+//expresiones();
+
 
 function ejercicioVocales(){
     let vocalesmatch = 'un murcielago grande';
@@ -370,8 +385,48 @@ function ejercicioVocales(){
     for (let str  of matcVocales){
         console.log( str );
     }    
-}
-ejercicioVocales();
+ }
 
+//ejercicioVocales();
+
+
+function otrosEjercicion(){
+    let regexp = /([^aeiou])[B-Z]*/g;
+    let palabra ='GUstavo Adolfo Cortes';
+    let match = palabra.match(regexp);
+    console.log(match);
+
+    regexp =/d+/g;
+    palabra ='27/11/2012';
+    console.log(palabra.match(palabra));
+
+    regexp =/java/;
+    palabra ='java es guay';
+    console.log(palabra.match(regexp));
+
+    regexp =/\.\d+/g;
+    palabra ='11.22';
+    console.log(palabra.match(regexp));
+
+
+    regexp =/\d+\s\km/;
+    palabra ='11 millas 10 km';
+    console.log(palabra.match(regexp));
+
+    regexp =/\d+\s\m/;
+    palabra ='11 km 12 km 14 m';
+    console.log(palabra.match(regexp));
+
+
+    //- ¿Porque devuelve null  "hola".match(/HOLA/) y como arreglarlo para que devuelva ["hola"]?
+    regexp = /HOLA/i ;
+    console.log("hola".match(regexp));
+    //- Programe una expresión regular que de este texto  "hola\ntu" obtenga ["tu"]
+    regexp = /\s(\w+)/ ;
+    console.log("hola\ntu".match(regexp));
+
+}
+
+otrosEjercicion();
 
 
