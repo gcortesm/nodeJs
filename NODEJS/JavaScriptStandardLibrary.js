@@ -595,10 +595,12 @@ class HisoriaMedica{
         return `Codigo HU: ${this.codigoH} Fecha Registro: ${this.fecha.toLocaleString()}
         Tratamiento: ${this.tratamiento}`;
     }
+
+    //le agregue las palabras get y set a las funciones  solo para que fuera mas descriptivo 
     get getFechaRegistro(){
         return this.fecha;
     }
-    set setFechaRegistro( fecha){
+    set setFechaRegistro( fecha ){
         this.fecha = fecha;
     }
 }
