@@ -391,23 +391,29 @@ function ejercicioVocales(){
 
 
 function otrosEjercicion(){
-    let regexp = /([^aeiou])[B-Z]*/g;
-    let palabra ='GUstavo Adolfo Cortes';
+    let regexp = /[^AEIOU]/gi;//hizo los grupos de la bd fh y asi.
+    let palabra ='Gustavo adolfo Cortes';
     let match = palabra.match(regexp);
     console.log(match);
 
-    regexp =/d+/g;
+    regexp =/\d+/g;
     palabra ='27/11/2012';
-    console.log(palabra.match(palabra));
+    console.log(palabra.match(regexp));
 
     regexp =/java/;
     palabra ='java es guay';
     console.log(palabra.match(regexp));
 
+
+    console.log('papa pa tururur'.match(/(pa){0,2}/));
+    //[]Coincida lo que esta dentro
+    //() que empiece por ese 
+    //. cualquier caracter siguiente  
     regexp =/\.\d+/g;
     palabra ='11.22';
     console.log(palabra.match(regexp));
 
+    console.log("'hola tu' tururú".match(/(["']).*\1/));
 
     regexp =/\d+\s\km/;
     palabra ='11 millas 10 km';
@@ -422,11 +428,222 @@ function otrosEjercicion(){
     regexp = /HOLA/i ;
     console.log("hola".match(regexp));
     //- Programe una expresión regular que de este texto  "hola\ntu" obtenga ["tu"]
-    regexp = /\s(\w+)/ ;
+    regexp = /\s/ ;
     console.log("hola\ntu".match(regexp));
+
+    let matrix = new Float64Array(9);
+    console.log(matrix);
+    console.log(270 / 192);
+    console.log(192 * 0.40625);
+
+
+    console.log(Uint8Array.of(2,3,5,2,3,8000));
 
 }
 
-otrosEjercicion();
+//otrosEjercicion();
 
+
+/**
+ * Dates an times
+ * Class Date. Es una api para trabajar con fechas y horas.
+ */
+function ManejoFechas(){
+    let ahora = new Date();
+    console.log(ahora);
+
+    let epoch =new Date(0);
+    console.log(epoch);
+
+    let centuri = new Date(2100,//Anio 2100
+                            0,  //mes 
+                            1,  //dia 
+                            2,3,4,5);// 02:03:04.005 hora local.
+    console.log(centuri);
+    centuri = new Date(2100,//Anio 2100
+        0,  //mes 
+        1  //dia 
+        );// Si removemos las horas nos deja en la media noche.
+
+    console.log(centuri);
+
+    /**
+     * UTC.  Tiempo universal coordinado.Estandar de tiempo por el cual el mundo regula los relojes
+     */
+
+    centuri =Date.UTC(2100,0,1);
+    console.log(centuri); //Esto es en milisegundos, 
+    let time = new Date(centuri); //convertimos esto a una fecha normal.
+    console.log(time);
+
+    //Todos los metodos GET del Objeto Date sin usar los UTC.
+    console.log(time.getFullYear());
+    console.log(time.getYear());
+    console.log(time.getMonth());
+    console.log(time.getDay());
+    console.log(time.getDate());
+    console.log(time.getHours());
+    console.log(time.getMinutes());
+    console.log(time.getSeconds());
+    console.log(time.getMilliseconds());
+    console.log(time.getTime());
+    console.log(time.getTimezoneOffset());
+
+    let propertyes = Object.getOwnPropertyNames( Date.prototype ); 
+    console.log(`Propiedades de El objeto date \n ${propertyes}`  );
+
+    propertyes.filter(evt => evt.match("get") && !evt.match("getUTC")  )
+              .forEach(ite=> console.log( `Metodo Get -> ${ite} valor: ${time[ite]()}`));
+
+    //Metodos GetUTC.
+    /*propertyes.filter(evt => evt.match("getUTC")  )
+    .forEach(ite=> console.log( `Metodo Get -> ${ite} valor: ${time[ite]()}`));
+    */
+
+    console.log(time.getUTCFullYear());
+    console.log(time.getUTCMonth());
+    console.log(time.getUTCDay());
+    console.log(time.getUTCDate());
+    console.log(time.getUTCHours());
+    console.log(time.getUTCMinutes());
+    console.log(time.getUTCSeconds());
+    console.log(time.getUTCMilliseconds());
+    //Usar UTC como estandar
+    //UTC variacion segun el meridiano { UTC=>Transformarlo al horario local}
+
+
+    console.log(time);
+    console.log(time.setFullYear(2021));
+    console.log(time.setYear(2022));
+    console.log(time.setMonth(2));
+    console.log(time.setDate(23));
+    console.log(time.setHours(22));
+    console.log(time.setMinutes(35));
+    console.log(time.setSeconds(23));
+    console.log(time.setMilliseconds(234));
+    console.log(time);
+    time.setTime(new Date(0));
+    console.log(time);
+
+    //Metodos set UTC
+    console.log(time);
+    time.setUTCFullYear(2022);
+    time.setUTCMonth(10);
+    time.setUTCDate(23);
+    time.setUTCHours(12);
+    time.setUTCMinutes(23);
+    time.setUTCSeconds(43);
+    time.setUTCMilliseconds(123);
+    console.log(time);
+    // JavaScript maneja las fechas en milisegundos
+    // Admite 8.640.000.000.000.000 de milisegundos. equivale a 270.000 anios
+
+    console.log(time);
+    time.setTime(time.getTime()+30000);//30 segundos
+    console.log(time);
+    //Agregar milisegundos se podria definir como marcas de tiempo
+
+    let startTime = Date.now();
+    //Codigo para medir el rendimiento
+    let endTime = Date.now();
+    console.log(`Tiempo de ejecucion ${endTime-startTime}`);
+
+    //Formato de fechas, Convertir los objetos de fecha en cadenas.
+    /**
+     * toString() => Transforma la fecha a texto usando la zona horaria local.
+     * /
+     */
+    let fechaText = time.toString();
+    console.log(fechaText);
+    let fechaTextUTC = time.toUTCString();
+    console.log(fechaTextUTC);
+
+    let toIsoString =time.toISOString(); 
+    // Este formato imprime Anio-mes-dia Hora:Minutos:Segundos.milisegundos
+    //T => Separa la fecha y la hora.
+    //Z => Especifica hora local.
+    console.log(toIsoString);
+    
+    //Hora en texto local
+    console.log(time.toLocaleString());
+    //Transformacion solo fecha
+    console.log(time.toDateString());
+    console.log(time.toLocaleDateString());
+    console.log(time.toTimeString());
+    console.log(time.toLocaleTimeString());
+
+    //Transformacion de cadenas a fechas. queda en milisegundos.
+    let transform =new Date(Date.parse('2012/06/23'));
+    console.log(transform);
+}
+//ManejoFechas();
+
+/**Ejercicio de fechas 
+ * 
+ * Historias clinicas de un hospital. 
+ * Resulta que antes se manejaba en papel y querian migrar todo a un sistema
+ * ya los registros se habia digitalizado pero tenian n formatos de fechas
+*/
+class HisoriaMedica{
+    static COD_HU = 0;
+    constructor(fecha){
+        this.fecha = fecha;
+        this.codigoH = ++ HisoriaMedica.COD_HU;
+        this.tratamiento = 'Mismo tratamiento para todas';
+    }
+    toString(){
+        return `Codigo HU: ${this.codigoH} Fecha Registro: ${this.fecha.toLocaleString()}
+        Tratamiento: ${this.tratamiento}`;
+    }
+    get getFechaRegistro(){
+        return this.fecha;
+    }
+    set setFechaRegistro( fecha){
+        this.fecha = fecha;
+    }
+}
+
+function EjercicioDeFechas(){
+    let fechas =['2012/09/08','2013/10/08','2014/09/08','2015/09/08',
+    '2014/09/08','2021/09/08','2018/07/08','2017/09/08','2016/09/08',
+    '2011/09/08','2014/09/08','2021/09/08','2011/09/08','2017/09/08',
+    'asdw/23/12', 'asd32d/as/4','4435/3e/3','fsd/sd',
+    '2010/09/08','2018/07/08','2022/09/08','2019/09/08','2018/09/08',
+    '2012-06-17','2012-06-21','2012-06-22','2012-06-25','06/05/2012',
+    '1413ad23','124w/34/34', 'f343/23/23','as33123','124s/wer/w','dejulio'
+    ];
+
+    let dateTEst = new Date("2012-09-23");
+    dateTEst;
+
+    let huMedicas = [];
+    fechas.forEach(item => {
+        huMedicas.push(new HisoriaMedica(new Date(item)));
+        console.log( huMedicas[huMedicas.length-1].toString());
+
+    });
+    /*
+    En auditoria se descubrio que los paciente registrados en julio de 2018
+    en realidad eran de enero, fue un error de un digitalizador. 7-1
+    */ 
+    let fnComparar=(item,fIError,fFError)=>{
+        return item.getTime()>= fIError && item.getTime()<= fFError;
+    }
+    let fIError = Date.UTC(2018,6,1),fFError = Date.UTC(2018,6,31);
+    console.log('Fechas invalidas');
+    huMedicas.filter(item =>fnComparar(item.getFechaRegistro,fIError,fFError)).forEach(item=>{
+        console.log(` Registro con fecha erronea ${item.toString()}`);
+        item.FechaRegistro = item.getFechaRegistro.setMonth(0);
+        console.log(`Registro corregido ${item.toString()}`);
+    });  
+
+
+    // Unos formatos de fechas se cargaron mal se determino que eran de otra fecha ejemplo 2012-06-21
+    huMedicas.filter(item=>item.getFechaRegistro.toDateString() === 'Invalid Date' ).forEach(item => {
+        console.log(`Fecha Invalida` + item.toString());
+        item.setFechaRegistro = new Date("2012-06-21");
+        console.log(`Fecha Corregida ` + item.toString());
+    });
+}
+EjercicioDeFechas();
 
