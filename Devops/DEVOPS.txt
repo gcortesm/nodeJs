@@ -21,7 +21,7 @@ Seguridad Psicologica:
 a. Trello, Azure Devops
 b. 
 
-Cada área debería definir un rol encargado de gestionar la comunicación con otras equipos, de este manera el puede diseccionar cualquier solicitud de manera mas asertiva, pues conoce los integrantes del área a la que pertenece.
+Cada área debería definir un rol encargado de gestionar la comunicación con otras equipos, de este manera el puede direccionar cualquier solicitud de manera mas asertiva, pues conoce los integrantes del área a la que pertenece.
 
 Generar un organigrama con los lideres he integrantes de cada área  de la empresa , donde se tenga información de contacto  con la idea de reducir los tiempos que se pueden invertir en tratar de comunicarse con otras áreas.
  
