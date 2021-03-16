@@ -696,7 +696,7 @@ function internacionalizacion() {
     //Se recomienda usar esta para un programa en produccion.
 }
 
-//internacionalizacion();
+internacionalizacion();
 
 function UsandoUrl() {
     let url = new URL('https://www.google.com/search?query=agisasd');
@@ -781,4 +781,12 @@ function timers() {
 
 
 }
-timers();
+//timers();
+
+const miClock = setInterval(() => {
+    console.clear();
+    console.log(`la hora es ${new Date().toLocaleTimeString()}`);
+}, 1000);
+setTimeout(() => {
+    miClock();
+}, 10000);
