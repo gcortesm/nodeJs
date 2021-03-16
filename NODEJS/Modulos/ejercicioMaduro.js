@@ -13,18 +13,22 @@ function require(nameModule) {
 }
 modules['internacionaliza'] = (function (){
     const exports = {};
-    exports.intl = function (value){
-        Intl.NumberFormat("es", { style: "currency", currency: "COP" });
-        return modena.format(value);
+    exports.internacinalizar = function (value) {
+        const moneda = Intl.NumberFormat("es", { style: "currency", currency: "COP" });
+        console.log(moneda.format(value));
+        return moneda.format(value);
     };
     return  exports;
 
-});
+}());
+
+
 
 modules['miBank'] = (function () {
 
     const exports = {};
-    const internacinalizar =modules['internacionaliza']; //require('internacionaliza');
+    const myInternacio = require('internacionaliza');
+    //console.log(internacinalizar.i //;
     exports.bank = class Bank {
         static RETAIREMENT = 0;
         static CONSIGN = 0;
@@ -46,11 +50,11 @@ modules['miBank'] = (function () {
                         break;
                     case 0:
                         console.log(`Codigo Consignacion: ${exports.bank.idConsign}
-                                     Monto consginacion: ${internacinalizar.intl(amount)}
+                                     Monto consginacion: ${myInternacio.internacinalizar(amount)}
                                      Estado : Aprobado`);
                         break;
                     case 1:
-                        console.log(`Monto consginacion: ${internacinalizar.intl(amount)}
+                        console.log(`Monto consginacion: ${myInternacio.internacinalizar(amount)}
                                      Estado : Denegado
                                      Motivo : Cuenta bloqueada`);
                         break;
@@ -72,11 +76,11 @@ modules['miBank'] = (function () {
                         break;
                     case 0:
                         console.log(`Codig Retiro: ${exports.bank.idRetairement}
-                                     Monto Retiro: ${amount}
+                                     Monto Retiro: ${myInternacio.internacinalizar(amount)}
                                      Estado : Aprobado`);
                         break;
                     case 1:
-                        console.log(`Monto Retiro: ${amount}
+                        console.log(`Monto Retiro: ${myInternacio.internacinalizar(amount)}
                                      Estado : Denegado
                                      Motivo : Saldo insuficiente`);
                         break;
@@ -252,10 +256,4 @@ setTimeout(()=>{
     for (let cliente of miObjBank.Clientes) {
         console.log(cliente);
     }
-},1000);
-
-
-
-
-//console.log(miObjBank);
-
+},5000);
