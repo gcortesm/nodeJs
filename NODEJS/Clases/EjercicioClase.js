@@ -61,7 +61,7 @@ class EmpleadoPower {
         this.fechaIngreso = new Date();
         this.aniosExperiencia = aniosExperiencia;
         this.rangoSalarial = 0;
-        this.proyectos = new Map();
+        this.proyectos = [];
     }
     toString() {
         return `
@@ -118,3 +118,4 @@ console.log(obj2.toString());
 console.log(obj2.getProyectos());
 
 const ob3 = new Gerente('Carlos Alberto', 'Esteban Cabrales', 'Gerente', 12 ,1);
+console.log(ob3.toString());
