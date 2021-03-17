@@ -148,6 +148,10 @@ modules['miBank'] = (function () {
             this.amount += amount;
             return 0;
         }
+
+        toString(){
+            return `Monto: ${myInternacio.internacinalizar(this.amoun)}`;
+        }
     };
 
     exports.cliente = class Cliente {
