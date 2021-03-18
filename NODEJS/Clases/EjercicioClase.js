@@ -5,7 +5,7 @@ function Empleado(nombre, apellido, cargo, aniosExperiencia) {
     this.fechaIngreso = new Date();
     this.aniosExperiencia = aniosExperiencia;
     this.rangoSalarial = 0;
-    this.proyectos = [];
+    this.proyectos = new Map();
 }
 
 Empleado.prototype = {
@@ -61,7 +61,7 @@ class EmpleadoPower {
         this.fechaIngreso = new Date();
         this.aniosExperiencia = aniosExperiencia;
         this.rangoSalarial = 0;
-        this.proyectos = [];
+        this.proyectos = new Map();
     }
     toString() {
         return `

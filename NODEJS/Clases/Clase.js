@@ -110,3 +110,31 @@ let SquereInClass = class {
 }
 console.log(new SquereInClass(4).area);
 
+
+
+/**
+ * Valores staticos
+ */
+
+class Cuadrado {
+
+    //Variables privadas
+    #propiedadPrivada = 0;
+    static texto = 'Tonces Que pai';
+    static metodoStatico(x) {
+        return x * x;
+    }
+    metodoInterface() {
+        throw new Error('Metodo Abstracto')
+    }
+}
+
+class OtroCuadrado extends Cuadrado {
+    metodoInterface() {
+        console.log('Implementeme')
+    }
+}
+
+console.log(Cuadrado.metodoStatico(123));
+
+console.log(Cuadrado.texto);
