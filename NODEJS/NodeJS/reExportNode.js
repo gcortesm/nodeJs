@@ -1,0 +1,1 @@
+module.exports.moule1 = require('./luz'); //Esto seria un Re-Export

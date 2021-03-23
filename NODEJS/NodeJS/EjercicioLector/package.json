@@ -1,0 +1,14 @@
+{
+  "name": "ejerciciolector",
+  "version": "1.0.0",
+  "description": "Leer un txt y proporcionar un array concatenado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustavo Adolfo Cortes Mondragon",
+  "license": "ISC",
+  "dependencies": {
+    "concat-stream": "^2.0.0"
+  }
+}
