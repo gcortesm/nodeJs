@@ -1,0 +1,26 @@
+npm manejador de paquetes por relevancia para node
+aunque tenemos mas alternativas el mas popular es npm.
+
+npm init => inicializamos un package json.
+
+npm install => instalamos usando un package.json
+por defecto
+
+npm install <nombrepaq> => agregamos un paquete a nuestro package
+--save
+--save-dev
+
+
+npm update => Actualizamos las dependencias
+
+npm run comnad_name => este ejecuta un comando que hconfiguramos en le package.json
+
+
+
+instalaciones locales o globales. Lo ideal son usar locales para cada proyecto de esta manera 
+tenemos un ambiente configurado propio por aplicacion
+ npm install  -g <packge name>
+
+
+ package.json , puede estar vacio solo debe ser un archivo en formato json
+ 

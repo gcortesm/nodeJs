@@ -1,0 +1,45 @@
+2021-03-26 09:10:51,333 ERROR 30248 [-/::1/-/5ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg\lib\application.js:266:15)
+    at Object.get cookies [as cookies] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg\app\extend\context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\app\extend\context.js:91:35)
+    at Object.ensureCsrfSecret (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\app\extend\context.js:104:13)
+    at csrf (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\lib\middlewares\csrf.js:15:11)
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at session (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa-session\index.js:41:13)
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+
+pid: 30248
+hostname: PSLT6254
+
+2021-03-26 09:13:27,666 ERROR 30248 [-/::1/-/1ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg\lib\application.js:266:15)
+    at Object.get cookies [as cookies] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg\app\extend\context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\app\extend\context.js:91:35)
+    at Object.ensureCsrfSecret (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\app\extend\context.js:104:13)
+    at csrf (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\lib\middlewares\csrf.js:15:11)
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at session (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa-session\index.js:41:13)
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+
+pid: 30248
+hostname: PSLT6254
+
+2021-03-26 09:14:02,483 ERROR 29020 [-/::1/-/3ms GET /] nodejs.TypeError: this.config.keys.split is not a function
+    at Application.get keys [as keys] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg\lib\application.js:269:37)
+    at Object.get cookies [as cookies] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg\app\extend\context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\app\extend\context.js:91:35)
+    at Object.ensureCsrfSecret (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\app\extend\context.js:104:13)
+    at csrf (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\lib\middlewares\csrf.js:15:11)
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\egg-security\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at session (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa-session\index.js:41:13)
+    at dispatch (C:\Users\gucortez\Documents\CursoNodejs\NODEJS\AutoAprendizaje\Egg\myegg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+
+pid: 29020
+hostname: PSLT6254
+

@@ -1,0 +1,16 @@
+{
+  "name": "yarnproject",
+  "version": "1.0.0",
+  "description": "Esto es un init usando yarn",
+  "main": "index.js",
+  "author": "Gustavo Adolfo Cortes Mondragon",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": false,
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "~4.17.1"
+  }
+}

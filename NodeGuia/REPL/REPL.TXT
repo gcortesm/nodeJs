@@ -1,0 +1,6 @@
+Este es el modo al que entramos al pulsar el comando node en la consola.
+
+aca podemos empezar a ejecutar cualquier estructura de programacion en lenguaje Js
+
+Entendiendo aca que no vamos a usar, ni los objetos document ni el objeto window ya que 
+estos los proporciona el navegador.

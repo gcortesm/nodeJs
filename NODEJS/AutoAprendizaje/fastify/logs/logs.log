@@ -1,0 +1,7 @@
+{"level":30,"time":1616789584792,"pid":10252,"hostname":"PSLT6254","msg":"Server listening at http://127.0.0.1:3300"}
+{"level":30,"time":1616789600484,"pid":10252,"hostname":"PSLT6254","reqId":"req-1","req":{"method":"GET","url":"/","hostname":"127.0.0.1:3300","remoteAddress":"127.0.0.1","remotePort":57391},"msg":"incoming request"}
+{"level":30,"time":1616789600500,"pid":10252,"hostname":"PSLT6254","reqId":"req-1","msg":"Un get a nuestro server Fri Mar 26 2021 15:13:20 GMT-0500 (hora estándar de Colombia)"}
+{"level":30,"time":1616789600505,"pid":10252,"hostname":"PSLT6254","reqId":"req-1","res":{"statusCode":200},"responseTime":20.335300028324127,"msg":"request completed"}
+{"level":30,"time":1616789623345,"pid":10252,"hostname":"PSLT6254","reqId":"req-2","req":{"method":"GET","url":"/","hostname":"127.0.0.1:3300","remoteAddress":"127.0.0.1","remotePort":57392},"msg":"incoming request"}
+{"level":30,"time":1616789623355,"pid":10252,"hostname":"PSLT6254","reqId":"req-2","msg":"Un get a nuestro server Fri Mar 26 2021 15:13:43 GMT-0500 (hora estándar de Colombia)"}
+{"level":30,"time":1616789623355,"pid":10252,"hostname":"PSLT6254","reqId":"req-2","res":{"statusCode":200},"responseTime":0.9966000318527222,"msg":"request completed"}

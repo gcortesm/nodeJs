@@ -1,0 +1,17 @@
+{
+  "name": "testnpm",
+  "version": "1.0.0",
+  "description": "Esta es una prueba con NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustavo Adolfo Cortes Mondragon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
+
