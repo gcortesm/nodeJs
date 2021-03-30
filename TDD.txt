@@ -1,1 +1,5 @@
 Diseno de teclados ergonomicos para desarrolladores
+
+
+-- Agregar atajos de teclado que permitan la ejecucion de secuencias establecidas por el usuario. ShortCuts.
+-- Manejar de manera independiente la respuesta de una tecla como tambien la intensidad y colores de la misma.
