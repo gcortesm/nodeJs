@@ -3,7 +3,31 @@ Diseno de teclados ergonomicos para desarrolladores
 
 
 -- Crear secuencia de comandos encadenados uno tras otro.
--- Asignar secuencias de comando creadas a combinaciones de teclas.
+   Ingresar comandos en el orden deseado
+   Validar los comandos ingresados.
+   si se da click en el boton registrar.
+   Mensaje de confimarcion de registro
+   Si el registro es exitoso notificar al usuario del registros
+   si el registro falla mostrar una descripcion del mensaje
+-- Asignar secuencias de comando creadas a Shortcuts.
+   Ingresar la combinacion de teclas.
+   Buscar la secuencia de comandos ya registradas.
+   permitir guardar la asignacion de secuencias.
 -- Registrar color para cada tecla.
+   Seleccionar tecla a la que se le desea asignar un color
+   Seleccionar el color RGB para la tecla de la paleta de colores.
+   Guardar la asignacion del color
+   Mostrar un mensaje si la operacion es exitosa en caso de no ser mostrar descripcion del error.
+
 -- Registrar intensidad luminica para cada una de las teclas.
+   Seleccionar tecla a la que se le desea asignar una nueva intensidad luminica.
+   asignar un valor porcentual entre 0 y 100  
+   Guardar la asignacion de la intensidad luminica.
+   Mostrar un mensaje si la operacion es exitosa en caso de no ser mostrar descripcion del error.
+
 -- Modificar la frecuencia de respuestas del teclado en general
+   Modificar la velocidad de la respuesta del teclado.
+   debe seleccionar entre las 4 velocidades posibles (500mhz - 800mhz -1200mhz -1500mhz)
+   una vez seleccionada la velocidad guardar estas configuraciones.
+   Mostrar un mensaje si la operacion es exitosa en caso de no ser mostrar descripcion del error.
+
