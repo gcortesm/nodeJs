@@ -5,8 +5,8 @@ Diseno de teclados ergonomicos para desarrolladores
 -- Crear secuencia de comandos encadenados uno tras otro.
    Ingresar comandos en el orden deseado
    Validar los comandos ingresados.
-   si se da click en el boton registrar.
-   Mensaje de confimarcion de registro
+   Registrar comandos
+   confirmar registro
    Si el registro es exitoso notificar al usuario del registros
    si el registro falla mostrar una descripcion del mensaje
 -- Asignar secuencias de comando creadas a Shortcuts.
