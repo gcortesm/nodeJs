@@ -1,0 +1,8 @@
+
+Scenario: Intento de login sin credenciales
+
+
+Scenario: Intento de login credenciales erroneas
+
+
+Scenario: Credenciales correctas.

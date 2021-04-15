@@ -1,0 +1,48 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.16.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, chmod '/home/ubuntu/doc/CursoNodejs/BDDExamples/node_modules/cucumber/node_modules/.bin/gherkin-javascript'
+
+npm manifest: 
+  {
+    "name": "examples",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "cucumber": "^6.0.5",
+      "cucumber-html-reporter": "^5.2.0"
+    },
+    "dependencies": {
+      "axios": "^0.20.0",
+      "dotenv-flow": "^3.2.0",
+      "faker": "^5.1.0",
+      "lodash": "^4.17.20",
+      "yarn": "^1.22.10"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

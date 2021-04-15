@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/",
-    "report": "node report.js"
+    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/"
   },
   "keywords": [],
   "author": "",

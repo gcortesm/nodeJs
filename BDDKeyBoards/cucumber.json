@@ -1,0 +1,126 @@
+[
+  {
+    "description": "    Para administrar funcionalidades del keyBoard \n    como desarrollador \n    quiero asegurarme que las operaciones crud de la secuencia de comandos funcione bien",
+    "keyword": "Feature",
+    "name": "DirectoryService",
+    "line": 2,
+    "id": "directoryservice",
+    "tags": [
+      {
+        "name": "@directory-service",
+        "line": 1
+      }
+    ],
+    "uri": "src\\features\\keyboards.feature",
+    "elements": [
+      {
+        "id": "directoryservice;crear-un-conjunto-de-comandos",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "crear un conjunto de comandos",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "un conjunto de comandos {\"name\":\"compile and push proyect\",\"describe\":\"Este comando se basa en compliar la socuion y hacer el push al repositorio remoto\",\"commands\":[\"Command 1\",\"command 2\" , \"command 3\"], \"aparams\":\"1\"}",
+            "match": {
+              "location": "src\\steps\\comands.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "envio una solicitud POST a /commands",
+            "match": {
+              "location": "src\\steps\\comands.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "yo obtengo el codigo de respuesta 201",
+            "match": {
+              "location": "src\\steps\\comands.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "directoryservice;consultar--un-comando.",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Consultar  un comando.",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "un comando con el 1",
+            "match": {
+              "location": "src\\steps\\comands.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "envio una solicitud GET a /commands/",
+            "match": {
+              "location": "src\\steps\\comands.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "yo obtengo el commando con respuesta {\"id\":1, \"name\":\"compile and push proyect\",\"describe\":\"Este comando se basa en compliar la socuion y hacer el push al repositorio remoto\",\"commands\":[\"Command 1\",\"command 2\" , \"command 3\"], \"aparams\":\"1\"}",
+            "match": {
+              "location": "src\\steps\\comands.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
